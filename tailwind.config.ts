@@ -22,6 +22,9 @@ const config: Config = {
                 europa: ['Europa'],
                 roboto: ['Roboto'],
             },
+            screens: {
+                '900px': '900px',
+            },
         },
     },
     plugins: [],
