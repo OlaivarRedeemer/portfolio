@@ -1,4 +1,4 @@
-import Button from '@/components/button';
+import { Button } from '@/components/ui/button';
 import React from 'react';
 
 export default function HeroSection() {
@@ -14,7 +14,7 @@ export default function HeroSection() {
                         specialized in clean and minimalist designs.
                     </p>
                 </div>
-                <Button>Let's chat</Button>
+                <Button className="w-full sm:w-fit">Let's Chat</Button>
             </div>
             <div id="hero-image" className="h-full shrink-0">
                 <img src="/assets/images/hero-image.png" alt="Redeemer Olaivar" className="h-full" />
