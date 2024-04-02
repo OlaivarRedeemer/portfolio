@@ -11,6 +11,7 @@ const buttonVariants = cva(
             variant: {
                 default: 'bg-primary rounded-xl h-[57px] text-white text-lg px-8 py-[18px]',
                 secondary: 'bg-primary rounded-xl h-10 text-sm text-white px-6 py-3',
+                'faded-white': 'bg-white/20 rounded-xl h-[55px] text-lg text-white px-8 py-[18px]',
                 transparent: 'bg-transparent rounded-xl p-0',
             },
         },
