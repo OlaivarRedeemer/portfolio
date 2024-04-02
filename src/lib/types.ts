@@ -5,7 +5,7 @@ export interface IWorkCard {
     image2?: string;
     url?: string;
     bgClass: string;
-    shadowClass: string;
+    shadowClass?: string;
     titleClass: string;
     buttonClass: string;
     descriptionClass: string;
