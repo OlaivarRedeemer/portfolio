@@ -31,6 +31,7 @@ const config = {
                 primary: '#333333',
                 secondary: '#F4F4F4',
                 'primary-text': '#71717A',
+                'secondary-text': '#E8E8E8',
             },
             fontFamily: {
                 europa: ['Europa'],
@@ -38,6 +39,9 @@ const config = {
             },
             screens: {
                 '900px': '900px',
+                '1000px': '1000px',
+                '1100px': '1100px',
+                '1200px': '1200px',
             },
         },
     },
