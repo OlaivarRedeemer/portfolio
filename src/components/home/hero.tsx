@@ -1,27 +1,19 @@
-import { Button } from '@/components/ui/button';
-import WithPadding from '@/views/layout/with-padding';
-import React from 'react';
+import WithPadding from "@/views/layout/with-padding";
+import React from "react";
+import { Button } from "../ui/button";
 
 export default function HeroSection() {
-    return (
-        <WithPadding>
-            <div className="flex flex-col-reverse 900px:flex-row items-center justify-between gap-1">
-                <div id="heading" className="space-y-[25px] 900px:max-w-[500px]">
-                    <div className="space-y-[15px]">
-                        <h1 className="font-europa text-4xl sm:text-5xl text-primary">
-                            Hello, I&#39;m Redeemer: <br /> A UI/UX Designer
-                        </h1>
-                        <p className="text-lg sm:text-xl">
-                            I&#39;m a passionate UI/UX designer driven by creating intuitive and user-friendly
-                            experiences. I specialized in clean and minimalist designs.
-                        </p>
-                    </div>
-                    <Button className="w-full sm:w-fit">Let&#39;s Chat</Button>
-                </div>
-                <div id="hero-image" className="h-full shrink-0">
-                    <img src="/assets/images/hero-image.png" alt="Redeemer Olaivar" className="w-full" />
-                </div>
-            </div>
-        </WithPadding>
-    );
+  return (
+    <div>
+      <h2 className="text-center text-4xl font-extrabold py-[190px] leading-normal">
+        <span className="text-white text-opacity-40">Simple.</span>{" "}
+        <span className="text-white text-opacity-70">Clean.</span> Effective UI design.
+      </h2>
+      <div className="flex items-center justify-center">
+        <Button className="w-10 h-10 rounded-full border border-tertiary px-0 py-0">
+          <img src="/assets/icons/arrow-down.svg" alt="arrow-down" />
+        </Button>
+      </div>
+    </div>
+  );
 }

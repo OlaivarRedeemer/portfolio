@@ -1,17 +1,17 @@
-import Navbar from '@/components/navbar';
-import React from 'react';
+import Navbar from "@/components/navbar";
+import React from "react";
 
 interface LayoutProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
-    return (
-        <div className="">
-            <Navbar />
-            <div className="w-full text-primary-text">
-                <div className="w-full max-w-[1112px] mx-auto">{children}</div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="bg-primary">
+      <Navbar />
+      <div className="w-full text-white">
+        <div className="w-full max-w-[954px] mx-auto">{children}</div>
+      </div>
+    </div>
+  );
 }
