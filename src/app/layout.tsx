@@ -7,7 +7,12 @@ export const metadata: Metadata = {
   description:
     "I'm a passionate UI/UX designer driven by creating intuitive and user-friendly experiences. I specialized in clean and minimalist designs.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      {
+        url: "/logo.svg",
+        href: "/logo.svg",
+      },
+    ],
   },
 };
 
