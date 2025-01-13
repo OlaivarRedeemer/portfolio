@@ -10,7 +10,11 @@ export default function ProjectsSection() {
         return (
           <div key={index} className="w-full space-y-[30px]">
             <div className="flex justify-center items-center">
-              <img src={project.image} alt={project.image} />
+              <img
+                src={project.image}
+                alt={project.image}
+                className="hover:scale-[1.03] transition-all ease-in-out duration-200 cursor-pointer"
+              />
             </div>
             <div className="space-y-2.5">
               <h4 className="text-center text-[22px] font-extrabold underline">{project.title}</h4>
