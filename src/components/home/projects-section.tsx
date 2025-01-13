@@ -4,7 +4,7 @@ import React from "react";
 export default function ProjectsSection() {
   return (
     <div
-      id="projects-section"
+      id="projects"
       className="grid grid-cols-1 1000px:grid-cols-2 justify-center items-center gap-[100px] pt-[190px]">
       {projects.map((project, index) => {
         return (

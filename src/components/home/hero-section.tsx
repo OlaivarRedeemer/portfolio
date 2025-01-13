@@ -10,7 +10,7 @@ export default function HeroSection() {
         <span className="text-white text-opacity-70">Clean.</span> Effective UI design.
       </h2>
       <div className="flex items-center justify-center">
-        <Link href="#projects-section">
+        <Link href="#projects">
           <Button className="w-10 h-10 rounded-full border border-tertiary px-0 py-0 animate-bounce">
             <img src="/assets/icons/arrow-down.svg" alt="arrow-down" />
           </Button>
