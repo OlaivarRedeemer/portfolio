@@ -10,7 +10,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary rounded-md h-[57px] text-white text-lg px-8 py-[18px]",
-        secondary: "bg-secondary rounded-md h-[38px] text-sm font-medium text-white px-[15px] py-2.5",
+        secondary:
+          "bg-secondary hover:bg-secondary/[0.92] rounded-md h-[38px] text-sm font-medium text-white px-[15px] py-2.5",
         "faded-white": "bg-white/20 rounded-md h-[55px] text-lg text-white px-8 py-[18px]",
         transparent: "bg-transparent rounded-md p-0",
       },
