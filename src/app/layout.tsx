@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Redeemer Olaivar",
   description:
     "I'm a passionate UI/UX designer driven by creating intuitive and user-friendly experiences. I specialized in clean and minimalist designs.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
