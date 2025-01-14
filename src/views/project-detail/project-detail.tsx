@@ -4,7 +4,7 @@ import ProjectInfoSection from "@/components/project-detail/project-info";
 import { IProjectDetail } from "@/lib/types";
 import React from "react";
 
-interface ProjectDetailProps {
+export interface ProjectDetailProps {
   slug: string;
   detail: IProjectDetail;
 }
@@ -13,7 +13,7 @@ const ProjectDetailPage: React.FC<ProjectDetailProps> = ({ slug, detail }) => {
   return (
     <div className="w-full">
       <BackIcon />
-      <ProjectInfoSection detail={detail} />
+      <ProjectInfoSection slug={slug} detail={detail} />
       <ContactSection />
     </div>
   );

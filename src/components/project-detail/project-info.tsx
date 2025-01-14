@@ -1,7 +1,9 @@
 import { IProjectDetail } from "@/lib/types";
 import React from "react";
+import NextPrev from "./next-prev";
+import { ProjectDetailProps } from "@/views/project-detail/project-detail";
 
-const ProjectInfoSection: React.FC<{ detail: IProjectDetail }> = ({ detail }) => {
+const ProjectInfoSection: React.FC<ProjectDetailProps> = ({ slug, detail }) => {
   return (
     <div className="w-full space-y-10 md:space-y-[100px]">
       <img src={detail?.coverImage} alt={detail?.slug} />
@@ -34,6 +36,7 @@ const ProjectInfoSection: React.FC<{ detail: IProjectDetail }> = ({ detail }) =>
       {detail?.images.map((image, index) => {
         return <img key={index} src={image} alt={`${detail?.slug}-${index + 1}`} />;
       })}
+      <NextPrev slug={slug} />
     </div>
   );
 };
