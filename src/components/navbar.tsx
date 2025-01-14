@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -9,10 +10,15 @@ export default function Navbar() {
         <img src="/assets/icons/logo.svg" alt="logo" />
       </div>
       <div id="cta">
-        <Button variant="secondary" className="flex items-center gap-1.5">
-          <img src="/assets/icons/download.svg" alt="download" />
-          <p>Resume</p>
-        </Button>
+        <Link
+          href="https://drive.google.com/file/d/1pQAOE19uUozaKBfm_iVkefDulxjvSlXY/view"
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button variant="secondary" className="flex items-center gap-1.5">
+            <img src="/assets/icons/download.svg" alt="download" />
+            <p>Resume</p>
+          </Button>
+        </Link>
       </div>
     </div>
   );
