@@ -1,19 +1,14 @@
-"use client";
 import React from "react";
 import { Button } from "../ui/button";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const BackIcon = () => {
-  const router = useRouter();
-
-  const back = () => {
-    router.back();
-  };
-
   return (
-    <Button className="w-10 h-10 rounded-full border border-tertiary px-0 py-0 my-[50px]" onClick={back}>
-      <img src="/assets/icons/arrow-left.svg" alt="arrow-left" />
-    </Button>
+    <Link href="/">
+      <Button className="w-10 h-10 rounded-full border border-tertiary px-0 py-0 my-[50px]">
+        <img src="/assets/icons/arrow-left.svg" alt="arrow-left" />
+      </Button>
+    </Link>
   );
 };
 
