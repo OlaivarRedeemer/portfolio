@@ -14,7 +14,7 @@ export default function ProjectsSection() {
               <img
                 src={project.image}
                 alt={project.image}
-                className="hover:scale-[1.03] transition-all ease-in-out duration-200 cursor-pointer"
+                className="md:hover:scale-[1.03] transition-all ease-in-out duration-200 cursor-pointer"
               />
             </div>
             <div className="space-y-2.5">
