@@ -6,7 +6,7 @@ import { ProjectDetailProps } from "@/views/project-detail/project-detail";
 const ProjectInfoSection: React.FC<ProjectDetailProps> = ({ slug, detail }) => {
   return (
     <div className="w-full space-y-10 md:space-y-[100px]">
-      <img src={detail?.coverImage} alt={detail?.slug} />
+      <img src={detail?.coverImage} alt={detail?.slug} className="rounded-xl" />
       <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-[30px] md:gap-6">
         <div className="w-full space-y-[30px] col-span-9">
           <div className="space-y-2">
