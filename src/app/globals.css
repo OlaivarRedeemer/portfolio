@@ -322,6 +322,7 @@ picture source { display: none; }
   .m .menu.open .link { animation: rise .6s var(--ease) backwards; }
   .m .menu.open .link + .link { animation-delay: 60ms; }
 
+  .m .obj.in { animation-name: fade; } /* fades only, so it keeps its tilt */
   .m .in-now, .m .in-now * { animation: none !important; }
 
   /* Scroll-linked extras for browsers that have them; nothing depends on these. */
@@ -336,11 +337,11 @@ picture source { display: none; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .objects { position: absolute; right: var(--gutter); top: 0; bottom: 0; width: 760px; }
 .obj { position: absolute; transform: rotate(var(--turn, 0deg)); transition: transform .5s cubic-bezier(.34, 1.56, .64, 1), box-shadow .3s var(--ease); }
-.note { --turn: -3deg; left: 0; top: 96px; width: 248px; height: 252px; padding: 34px 24px 20px 26px; color: #1e2733; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E"), linear-gradient(172deg, #f7dc6f 0, #fde98f 15%, #ffef9f 60%, #fbe585 100%); border-radius: 2px 2px 26px 2px / 2px 2px 8px 2px;
+.sticky-note { --turn: -3deg; left: 0; top: 96px; width: 248px; height: 252px; padding: 34px 24px 20px 26px; color: #1e2733; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E"), linear-gradient(172deg, #f7dc6f 0, #fde98f 15%, #ffef9f 60%, #fbe585 100%); border-radius: 2px 2px 26px 2px / 2px 2px 8px 2px;
   box-shadow: 0 1px 1px rgb(60 45 0 / .18), 0 10px 14px -8px rgb(60 45 0 / .28), 14px 22px 26px -14px rgb(60 45 0 / .34); }
-.note ul { display: grid; gap: 7px; font: 500 26px/1.1 var(--hand); }
-.note li { display: flex; align-items: center; gap: 9px; }
-.note svg { flex: none; }
+.sticky-note ul { display: grid; gap: 7px; font: 500 26px/1.1 var(--hand); }
+.sticky-note li { display: flex; align-items: center; gap: 9px; }
+.sticky-note svg { flex: none; }
 .polaroid { --turn: 3.5deg; z-index: 1; left: 256px; top: 44px; width: 244px; margin: 0; padding: 14px 14px 12px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E"), linear-gradient(#ffffff, #f6f5f1); border-radius: 3px;
   box-shadow: 0 0 0 1px rgb(0 0 0 / .05), 0 2px 3px rgb(0 0 0 / .14), 0 18px 28px -12px rgb(0 0 0 / .32); }
 .polaroid-photo { position: relative; display: block; aspect-ratio: 1; overflow: hidden; background: #222; }
@@ -366,7 +367,7 @@ picture source { display: none; }
   .closing { min-height: 0; padding: 40px 20px 24px; }
   .closing .display { position: static; }
   .objects { position: relative; right: auto; left: 50%; width: 530px; height: 470px; margin: 24px 0 -188px -265px; transform: scale(.6); transform-origin: top center; }
-  .note { top: 40px; }
+  .sticky-note { top: 40px; }
   .polaroid { left: 262px; top: 0; }
   .tag-card { right: auto; left: 120px; bottom: 0; }
 }

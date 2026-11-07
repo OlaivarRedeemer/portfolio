@@ -12,7 +12,7 @@ const Tick = () => (
 export default function ClosingObjects() {
   return (
     <div className="objects">
-      <div className="obj note r">
+      <div className="obj sticky-note r">
         <p className="sr-only">What I do:</p>
         <ul>{skills.map((s) => <li key={s}><Tick />{s}</li>)}</ul>
       </div>
