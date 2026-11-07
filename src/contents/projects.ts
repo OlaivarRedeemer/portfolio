@@ -304,12 +304,12 @@ export const covers: Record<string, string> = { brooky: "cover-brooky", venue4us
 export const bySlug = (slug: string) => projects.find((p) => p.slug === slug);
 
 export const history = [
-  ["Bz", "UI/UX Designer", "at Blazesoft, Canada", "Feb 2025 - Present"],
-  ["S", "UI/UX Designer", "at SoftCode 365, Singapore", "May 2024 - Dec 2024"],
-  ["Br", "UI/UX and Creative Designer", "at Brooky Technologies, Philippines", "Aug 2022 - Mar 2024"],
-  ["CK", "Quality Assurance Specialist", "at CK Children’s Publishing, Philippines", "Apr 2022 - Jun 2022"],
-  ["Br", "UI/UX and Creative Designer Intern", "at Brooky Technologies, Philippines", "Feb 2022 - Jun 2022"],
-  ["F", "Layout Artist", "at Fulcrum Advertising", "2018 - 2019"],
+  ["exp-blazesoft", "UI/UX Designer", "at Blazesoft, Canada", "Feb 2025 - Present"],
+  ["exp-softcode", "UI/UX Designer", "at SoftCode 365, Singapore", "May 2024 - Dec 2024"],
+  ["exp-brooky", "UI/UX and Creative Designer", "at Brooky Technologies, Philippines", "Aug 2022 - Mar 2024"],
+  ["exp-ck", "Quality Assurance Specialist", "at CK Children’s Publishing, Philippines", "Apr 2022 - Jun 2022"],
+  ["exp-brooky", "UI/UX and Creative Designer Intern", "at Brooky Technologies, Philippines", "Feb 2022 - Jun 2022"],
+  ["exp-fulcrum", "Layout Artist", "at Fulcrum Advertising", "2018 - 2019"],
 ];
 
 export const principles = [

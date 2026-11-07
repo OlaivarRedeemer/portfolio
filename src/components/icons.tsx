@@ -8,6 +8,8 @@ export const Phone = () => (<svg {...base}><path d="M22 16.9v3a2 2 0 0 1-2.2 2 1
 export const LinkedIn = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 2H3.6C2.7 2 2 2.7 2 3.6v16.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V3.6c0-.9-.7-1.6-1.6-1.6zM8 19H5V9.5h3V19zM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3V9.5h2.9v1.3c.4-.8 1.4-1.6 2.9-1.6 3 0 3.5 2 3.5 4.6V19z" /></svg>);
 export const Copy = () => (<svg {...base} width={16} height={16}><rect x="9" y="9" width="12" height="12" rx="2" /><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" /></svg>);
 export const Check = () => (<svg {...base} width={16} height={16} strokeWidth={2.5}><path d="M5 12.5l4.500 4.500L19 7.500" /></svg>);
+export const Sun = () => (<svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="3.400" /><path d="M8 .8v2M8 13.200v2M.8 8h2M13.200 8h2M2.900 2.900l1.400 1.400M11.700 11.700l1.400 1.400M2.900 13.100l1.400-1.400M11.700 4.300l1.400-1.400" stroke="currentColor" strokeWidth="1.500" strokeLinecap="round" /></svg>);
+export const Moon = () => (<svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M14.200 10.300A6.600 6.600 0 0 1 5.700 1.800a.5.5 0 0 0-.7-.5 7.400 7.400 0 1 0 9.700 9.700.5.5 0 0 0-.5-.7z" /></svg>);
 export const Menu = () => (<svg {...base} width={24} height={24}><path d="M4 9h16M4 15h16" /></svg>);
 export const Close = () => (<svg {...base}><path d="M6 6l12 12M18 6L6 18" /></svg>);
 

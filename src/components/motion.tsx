@@ -10,6 +10,7 @@ const IMAGE_WAIT_MS = 900;
 const GRID = 8;
 const GRID_OFFSET = 0;
 const TILT_DEG = 2.7;
+const SEE_THROUGH = "rgba(0, 0, 0, 0)";
 const SHINE_TRAVEL = 22; // how far the shine band slides from the card centre, in % of its gradient
 
 /** Runs once `el` has a picture to show, so a frame never opens on an empty image. */
@@ -85,8 +86,8 @@ export default function Motion() {
         if (!gap) return;
         // A white band grows down to the line, so its dividers reach it too and no strip of grid shows.
         let before = el.previousElementSibling as HTMLElement | null;
-        for (let depth = 0; before && depth < 2 && getComputedStyle(before).backgroundColor !== "rgb(255, 255, 255)"; depth++) before = before.lastElementChild as HTMLElement | null;
-        if (before && getComputedStyle(before).backgroundColor === "rgb(255, 255, 255)") {
+        for (let depth = 0; before && depth < 2 && getComputedStyle(before).backgroundColor === SEE_THROUGH; depth++) before = before.lastElementChild as HTMLElement | null;
+        if (before && getComputedStyle(before).backgroundColor !== SEE_THROUGH) {
           before.style.minHeight = `${parseFloat(getComputedStyle(before).height) + gap}px`;
           before.dataset.fill = "";
         } else {

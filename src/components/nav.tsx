@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import CopyEmail from "./copy-email";
 import ContactLinks from "./contact-links";
-import { Close, Menu } from "./icons";
+import { Close, Menu, Moon, Sun } from "./icons";
 import { bySlug, contact } from "@/contents/projects";
 
 export default function Nav() {
@@ -18,8 +18,6 @@ export default function Nav() {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  const navClass = (active: boolean) => (active ? "btn btn-sm btn-ink" : "pill");
-
   return (
     <>
       <header className={`nav${isCase ? " is-case" : ""}`}>
@@ -27,10 +25,10 @@ export default function Nav() {
           {isCase ? (
             <Link className="pill" href={bySlug(path.slice(1))?.personal ? "/#personal" : "/#work"}>Back</Link>
           ) : (
-            <>
-              <Link className={navClass(path === "/")} href="/" aria-current={path === "/" ? "page" : undefined}>Work</Link>
-              <Link className={navClass(path === "/story")} href="/story" aria-current={path === "/story" ? "page" : undefined}>Story</Link>
-            </>
+            <div className="tabs">
+              <Link className={`tab${path === "/" ? " is-on" : ""}`} href="/" aria-current={path === "/" ? "page" : undefined}><Sun />Work</Link>
+              <Link className={`tab${path === "/story" ? " is-on" : ""}`} href="/story" aria-current={path === "/story" ? "page" : undefined}><Moon />Story</Link>
+            </div>
           )}
         </nav>
         <Link className="nav-name" href="/">Redeemer Olaivar</Link>

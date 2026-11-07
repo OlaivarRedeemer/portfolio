@@ -1,6 +1,7 @@
 import ContactSection from "@/components/contact-section";
 import { FindMark, Play, PolishMark, SystemMark, TangibleMark } from "@/components/icons";
 import Pic from "@/components/pic";
+import Sky from "@/components/sky";
 import ProjectCard from "@/components/project-card";
 import Words from "@/components/words";
 import { bySlug, principles, contact } from "@/contents/projects";
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <>
       <section className="hero">
+        <Sky time="morning" />
         <h1 className="display"><Words>Hi! I’m Redeemer Olaivar, a designer who makes digital products feel obvious in hindsight</Words></h1>
         <a className="btn" href={`mailto:${contact.email}`} target="_blank" rel="noopener noreferrer">Start a project with me <Play /></a>
       </section>
