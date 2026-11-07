@@ -1,0 +1,354 @@
+{
+  "blazesoft-p-albumza": [
+    1140,
+    1144
+  ],
+  "blazesoft-p-american-luck": [
+    1140,
+    1144
+  ],
+  "blazesoft-p-fortune-wins": [
+    1140,
+    1144
+  ],
+  "blazesoft-p-luck-party": [
+    1140,
+    1144
+  ],
+  "blazesoft-p-sportzino": [
+    1140,
+    1144
+  ],
+  "blazesoft-p-win-bonanza": [
+    1140,
+    1144
+  ],
+  "blazesoft-p-yay-casino": [
+    1140,
+    1144
+  ],
+  "blazesoft-p-zula-casino": [
+    1140,
+    1144
+  ],
+  "brooky-ba1-concept": [
+    1136,
+    682
+  ],
+  "brooky-ba1-shipped": [
+    1136,
+    682
+  ],
+  "brooky-ba2-concept": [
+    1136,
+    682
+  ],
+  "brooky-ba2-shipped": [
+    1136,
+    682
+  ],
+  "brooky-ba3-concept": [
+    1136,
+    682
+  ],
+  "brooky-ba3-shipped": [
+    1136,
+    682
+  ],
+  "brooky-flow": [
+    2304,
+    1540
+  ],
+  "brooky-p-admin": [
+    2304,
+    1344
+  ],
+  "brooky-p-buyers": [
+    2304,
+    1344
+  ],
+  "brooky-p-computation": [
+    2304,
+    1344
+  ],
+  "brooky-p-dashboard": [
+    2304,
+    1344
+  ],
+  "brooky-p-inventory": [
+    2304,
+    1344
+  ],
+  "brooky-p-mobile-1": [
+    2304,
+    1344
+  ],
+  "brooky-p-mobile-2": [
+    2304,
+    1344
+  ],
+  "brooky-p-project-detail": [
+    2304,
+    1344
+  ],
+  "brooky-p-projects": [
+    2304,
+    1344
+  ],
+  "brooky-p-reservation": [
+    2304,
+    1344
+  ],
+  "brooky-p-statement": [
+    2304,
+    1344
+  ],
+  "brooky-p-transaction": [
+    2304,
+    1344
+  ],
+  "cats": [
+    2400,
+    280
+  ],
+  "cats-mobile": [
+    780,
+    244
+  ],
+  "cover-blazesoft": [
+    1800,
+    1620
+  ],
+  "cover-brooky": [
+    1600,
+    1440
+  ],
+  "cover-homure": [
+    1800,
+    1620
+  ],
+  "cover-kuhit": [
+    1800,
+    1620
+  ],
+  "cover-v4u": [
+    1933,
+    1740
+  ],
+  "homure-p-leads": [
+    2304,
+    1344
+  ],
+  "homure-p-messages": [
+    2304,
+    1344
+  ],
+  "homure-p-property": [
+    2304,
+    1344
+  ],
+  "homure-p-search": [
+    2304,
+    1344
+  ],
+  "kuhit-p-chat": [
+    1140,
+    1144
+  ],
+  "kuhit-p-kuhits": [
+    1140,
+    1144
+  ],
+  "kuhit-p-match": [
+    1140,
+    1144
+  ],
+  "kuhit-p-nearby": [
+    1140,
+    1144
+  ],
+  "kuhit-p-selfie": [
+    1140,
+    1144
+  ],
+  "kuhit-p-send": [
+    1140,
+    1144
+  ],
+  "logo-blazesoft": [
+    600,
+    107
+  ],
+  "logo-brooky": [
+    600,
+    205
+  ],
+  "logo-softcode": [
+    600,
+    179
+  ],
+  "m-brooky-flow": [
+    1050,
+    2250
+  ],
+  "m-story-photos": [
+    1118,
+    729
+  ],
+  "m-v4u-flow": [
+    1050,
+    2838
+  ],
+  "nala": [
+    800,
+    800
+  ],
+  "phone-brooky-inventory": [
+    667,
+    1402
+  ],
+  "phone-brooky-progress": [
+    667,
+    1402
+  ],
+  "phone-brooky-today": [
+    667,
+    1402
+  ],
+  "phone-brooky-upload": [
+    667,
+    1402
+  ],
+  "phone-v4u-availability": [
+    506,
+    1064
+  ],
+  "phone-v4u-booking": [
+    592,
+    1246
+  ],
+  "phone-v4u-chat": [
+    592,
+    1246
+  ],
+  "phone-v4u-compare": [
+    506,
+    1064
+  ],
+  "phone-v4u-confirmed": [
+    592,
+    1246
+  ],
+  "phone-v4u-detail": [
+    506,
+    1064
+  ],
+  "phone-v4u-explore": [
+    592,
+    1246
+  ],
+  "phone-v4u-filters": [
+    592,
+    1246
+  ],
+  "phone-v4u-gallery": [
+    506,
+    1064
+  ],
+  "phone-v4u-inquiries": [
+    592,
+    1246
+  ],
+  "phone-v4u-inquiry": [
+    593,
+    1246
+  ],
+  "phone-v4u-map": [
+    592,
+    1246
+  ],
+  "phone-v4u-owner-add": [
+    667,
+    1402
+  ],
+  "phone-v4u-owner-calendar": [
+    667,
+    1402
+  ],
+  "phone-v4u-owner-inquiries": [
+    667,
+    1402
+  ],
+  "phone-v4u-owner-today": [
+    667,
+    1402
+  ],
+  "phone-v4u-results": [
+    592,
+    1246
+  ],
+  "phone-v4u-reviews": [
+    506,
+    1064
+  ],
+  "phone-v4u-saved": [
+    506,
+    1064
+  ],
+  "phone-v4u-welcome": [
+    593,
+    1246
+  ],
+  "story-photos": [
+    1137,
+    642
+  ],
+  "v4u-ba1": [
+    746,
+    880
+  ],
+  "v4u-ba2": [
+    746,
+    880
+  ],
+  "v4u-ba3": [
+    746,
+    880
+  ],
+  "v4u-flow": [
+    2304,
+    3548
+  ],
+  "v4u-p-book-1": [
+    2304,
+    1344
+  ],
+  "v4u-p-book-2": [
+    2304,
+    1344
+  ],
+  "v4u-p-decide-1": [
+    2304,
+    1344
+  ],
+  "v4u-p-decide-2": [
+    2304,
+    1344
+  ],
+  "v4u-p-find-1": [
+    2304,
+    1344
+  ],
+  "v4u-p-find-2": [
+    2304,
+    1344
+  ],
+  "v4u-p-owners-1": [
+    2304,
+    1344
+  ],
+  "v4u-p-owners-2": [
+    2304,
+    1344
+  ]
+}

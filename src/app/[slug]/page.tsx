@@ -1,32 +1,20 @@
-import { projectDetails } from "@/contents/project-detail";
-import ProjectDetailPage from "@/views/project-detail/project-detail";
-import { Metadata } from "next";
-import React from "react";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { bySlug, projects } from "@/contents/projects";
+import CaseStudy from "@/views/case-study";
 
-export const metadata: Metadata = {
-  title: "Redeemer Olaivar",
-  description:
-    "I'm a passionate UI/UX designer driven by creating intuitive and user-friendly experiences. I specialized in clean and minimalist designs.",
-  icons: {
-    icon: [
-      {
-        url: "/logo.svg",
-        href: "/logo.svg",
-      },
-    ],
-  },
+type Props = { params: { slug: string } };
+
+export const dynamicParams = false;
+export const generateStaticParams = () => projects.map((p) => ({ slug: p.slug }));
+
+export const generateMetadata = ({ params }: Props): Metadata => {
+  const p = bySlug(params.slug);
+  return p ? { title: p.name, description: p.summary } : {};
 };
 
-export const generateStaticParams = async () => {
-  const paths = ["/brooky", "/dazle", "/venue4use", "/plateful", "/nexus", "/amplify"];
-  return paths;
-};
-
-const Page = ({ params }: { params: { slug: string } }) => {
-  const slug = params.slug;
-  const detail: any = projectDetails.find((d) => d.slug === slug);
-
-  return <ProjectDetailPage slug={slug} detail={detail} />;
-};
-
-export default Page;
+export default function Page({ params }: Props) {
+  const project = bySlug(params.slug);
+  if (!project) notFound();
+  return <CaseStudy project={project} />;
+}
