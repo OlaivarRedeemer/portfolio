@@ -66,7 +66,7 @@ picture { display: contents; }
 .intro .r, .label-row .r { display: block; }
 
 /* Project grid: cells butt up against each other, split only by thin lines. */
-.cells { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; padding: 31px; }
+.cells { display: grid; grid-template-columns: 1fr 1fr; align-content: start; gap: 26px; padding: 31px; }
 /* A white mat, a soft lift and a hairline: the picture sits in the frame like a print. */
 .card { position: relative; display: block; border-radius: 12px; transform: perspective(1400px) translateY(var(--lift, 0)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   box-shadow: 0 0 0 6px #fff, 0 6px 16px rgb(0 0 0 / .2), 0 1px 3px 6px rgb(0 0 0 / .15), 0 0 8px rgb(0 0 0 / .25), 0 0 0 7px rgb(0 0 0 / .06);
@@ -75,6 +75,10 @@ picture { display: contents; }
 .card::before { content: ""; position: absolute; inset: 0 0 -9px; }
 .card::after { content: ""; position: absolute; inset: 0; border: 1px solid rgb(0 0 0 / .1); border-radius: inherit; pointer-events: none; }
 .card-scene { position: relative; display: block; width: 100%; aspect-ratio: 10 / 9; overflow: hidden; border-radius: inherit; }
+/* A soft diagonal band of light, which slides with the pointer. Homepage cards only. */
+.card-shine { position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; transition: opacity .4s;
+  -webkit-mask-image: linear-gradient(115deg, transparent calc(var(--shine, 0%)), #fff calc(40% + var(--shine, 0%)), #fff calc(60% + var(--shine, 0%)), transparent calc(100% + var(--shine, 0%)));
+  mask-image: linear-gradient(115deg, transparent calc(var(--shine, 0%)), #fff calc(40% + var(--shine, 0%)), #fff calc(60% + var(--shine, 0%)), transparent calc(100% + var(--shine, 0%))); }
 .card-pills { position: absolute; left: 10px; right: 10px; bottom: 10px; display: flex; flex-wrap: wrap; gap: 4px; }
 .card-pills > span { display: inline-flex; align-items: center; height: 24px; padding-inline: 9px; border-radius: 7px; font: 400 14px/1 var(--sans); white-space: nowrap; color: #fff; background: #303030; border: 1px solid rgb(138 138 138 / .3); backdrop-filter: blur(8px); }
 .card-pills > .pill-name { color: #000; background: #fff; border-color: rgb(0 0 0 / .3); backdrop-filter: none; }
@@ -82,18 +86,19 @@ picture { display: contents; }
 
 .label-row { padding: 24px var(--gutter); }
 .clients { display: grid; grid-template-columns: repeat(3, 1fr); }
-.client { display: grid; place-items: center; height: 104px; padding: 24px; }
+.client { display: grid; place-items: center; min-height: 104px; padding: 24px; }
 .client + .client { border-left: 1px solid var(--rule); }
 .logo-brooky, .logo-softcode { height: 28px; width: auto; }
 .logo-blazesoft { height: 17px; width: auto; }
 .personal-title { padding: 96px var(--gutter) 40px; }
 
 .approach-title { padding: 110px var(--gutter) 49px; text-align: center; }
-.approach { display: grid; grid-template-columns: repeat(3, 1fr); }
-.principle { padding: 24px var(--gutter) 32px; }
-.principle + .principle { border-left: 1px solid var(--rule); }
-.mark { display: block; margin-bottom: 48px; filter: drop-shadow(0 2px 3px rgb(0 0 0 / .22)); transition: transform .45s cubic-bezier(.34, 1.56, .64, 1); }
-.principle p { margin-top: 12px; font-size: 16px; line-height: 1.6; }
+.approach { display: grid; grid-template-columns: repeat(2, 1fr); }
+.principle { padding: 32px var(--gutter) 40px; }
+.principle:nth-child(even) { border-left: 1px solid var(--rule); }
+.principle:nth-child(n + 3) { border-top: 1px solid var(--rule); }
+.mark { display: block; margin-bottom: 56px; filter: drop-shadow(0 2px 3px rgb(0 0 0 / .22)); }
+.principle p { margin-top: 12px; max-width: 46ch; font-size: 16px; line-height: 1.6; }
 
 .contact { display: grid; grid-template-columns: 1fr 1fr; scroll-margin-top: 52px; }
 .contact > div { padding: 24px var(--gutter) 32px; }
@@ -107,8 +112,9 @@ picture { display: contents; }
 .email.copied .email-text > :first-child { opacity: 0; }
 .email.copied .email-text > [role="status"] { opacity: 1; }
 .links { display: flex; gap: 8px; }
-.footer-clip { overflow: hidden; }
-.footer img { width: 100%; height: 140px; object-fit: cover; object-position: top left; }
+.grass-line { padding: 40px var(--gutter) 8px; text-align: center; }
+.grass { position: relative; height: 128px; overflow: hidden; }
+.grass canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
 
 .case-title { position: relative; padding: 120px var(--gutter) 28px; }
 .case-title .display { margin-bottom: 18px; }
@@ -201,12 +207,14 @@ picture { display: contents; }
   .more { min-height: 220px; padding: 24px 20px; font-size: 26px; }
   .cells { gap: 20px; padding: 15px; }
 
-  .client { height: 88px; }
+  .client { min-height: 88px; }
   .client + .client { border-left: 0; border-top: 1px solid var(--rule); }
   .approach-title { padding: 56px 20px 32px; text-align: left; }
+  .approach-title br { display: none; }
   .approach { grid-template-columns: 1fr; }
   .principle { padding: 24px 20px 32px; }
-  .principle + .principle { border-left: 0; border-top: 1px solid var(--rule); }
+  .principle:nth-child(even) { border-left: 0; }
+  .principle:nth-child(n + 2) { border-top: 1px solid var(--rule); }
   .mark { margin-bottom: 32px; }
   .personal-title { padding: 56px 20px 28px; }
   .contact { grid-template-columns: 1fr; }
@@ -214,7 +222,8 @@ picture { display: contents; }
   .contact > div + div { border-left: 0; border-top: 1px solid var(--rule); }
   .t-44 { font-size: 36px; }
   .email { width: 100%; }
-  .footer img { height: 122px; }
+  .grass-line { padding: 32px 20px 4px; }
+  .grass { height: 108px; }
 
   .case-title { padding: 150px 20px 28px; }
   .case-hero, .case-section { padding: 20px; }
@@ -274,7 +283,7 @@ picture source { display: none; }
 .mono { transition: background .18s, color .18s; }
 .btn:active, .icon-btn:active, .pill:active { transform: scale(.97); }
 @media (hover: hover) {
-  .principle:hover .mark { transform: rotate(-6deg) scale(1.08); }
+  .card:hover .card-shine { opacity: .14; }
   .card:hover { --lift: -8px; z-index: 1; box-shadow: 0 0 0 6px #fff, 0 16px 20px rgb(0 0 0 / .12), 0 0 8px rgb(0 0 0 / .25), 0 1px 3px 6px rgb(0 0 0 / .15), 0 0 0 7px rgb(0 0 0 / .06); }
   .btn:hover { transform: translateY(-1px); box-shadow: var(--raise-hover); }
   .btn:active, .pill:active { transform: scale(.97); }
@@ -294,7 +303,6 @@ picture source { display: none; }
 @keyframes letter { from { opacity: 0; filter: blur(14px); transform: translateY(10px); } }
 @keyframes frame { from { opacity: 0; clip-path: inset(6% 4% round 24px); } to { opacity: 1; clip-path: inset(0 round 24px); } }
 @keyframes settle { from { transform: scale(1.1); } to { transform: scale(1.035); } }
-@keyframes cats { from { transform: translateY(105%); } }
 @keyframes fade { from { opacity: 0; } }
 
 .w { display: inline-block; white-space: nowrap; }
@@ -303,14 +311,12 @@ picture source { display: none; }
 @media screen {
   .m :is(.r, .r-frame, .panel-img, .card):not(.in) { opacity: 0; }
   .m .r-words:not(.in) .l { opacity: 0; }
-  .m .r-cats:not(.in) img { transform: translateY(105%); }
 
   .m .r.in { animation: rise .9s var(--ease) var(--d, 0ms) backwards; }
   .m .card.in { animation: fade .9s var(--ease) var(--d, 0ms) backwards; }
   .m .card.in .card-scene img { animation: settle 1.3s var(--ease) var(--d, 0ms) backwards; }
   .m :is(.panel-img, .r-frame).in { animation: frame 1.1s var(--ease) var(--d, 0ms) backwards; }
   .m .r-words.in .l { animation: letter .8s var(--ease) calc(var(--i, 0) * 16ms + var(--d, 0ms)) backwards; }
-  .m .r-cats.in img { animation: cats 1.1s cubic-bezier(.34, 1.3, .64, 1) backwards; }
 
   /* The flow plays through its steps in order, and again whenever a tab swaps it. */
 

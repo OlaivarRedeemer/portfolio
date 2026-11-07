@@ -11,77 +11,102 @@ export const Check = () => (<svg {...base} width={16} height={16} strokeWidth={2
 export const Menu = () => (<svg {...base} width={24} height={24}><path d="M4 9h16M4 15h16" /></svg>);
 export const Close = () => (<svg {...base}><path d="M6 6l12 12M18 6L6 18" /></svg>);
 
-/* The real problem, caught under the glass: a ladybug. */
+/* UX research: a closer look at the person, and what they are trying to say. */
 export const FindMark = () => (
   <svg className="mark" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
     <defs>
-      <radialGradient id="fm-glass" cx=".4" cy=".35" r=".8"><stop stopColor="#fff" /><stop offset="1" stopColor="#d6e6f5" /></radialGradient>
-      <linearGradient id="fm-rim" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#f2f2f2" /><stop offset=".5" stopColor="#8d8d8d" /><stop offset="1" stopColor="#3d3d3d" /></linearGradient>
+      <radialGradient id="fm-glass" cx=".4" cy=".3" r=".85"><stop stopColor="#fff" /><stop offset="1" stopColor="#d3e4f6" /></radialGradient>
+      <linearGradient id="fm-rim" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#f2f2f2" /><stop offset=".5" stopColor="#8d8d8d" /><stop offset="1" stopColor="#3a3a3a" /></linearGradient>
       <linearGradient id="fm-grip" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#4a4a4a" /><stop offset="1" stopColor="#050505" /></linearGradient>
-      <radialGradient id="fm-shell" cx=".35" cy=".3" r=".85"><stop stopColor="#ff6a55" /><stop offset="1" stopColor="#c8141c" /></radialGradient>
-      <clipPath id="fm-lens"><circle cx="33" cy="33" r="23" /></clipPath>
+      <linearGradient id="fm-body" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#8fc2ff" /><stop offset="1" stopColor="#2f6df0" /></linearGradient>
+      <radialGradient id="fm-head" cx=".38" cy=".32" r=".8"><stop stopColor="#ffe0b8" /><stop offset="1" stopColor="#eeaa6c" /></radialGradient>
+      <clipPath id="fm-lens"><circle cx="31" cy="39" r="23" /></clipPath>
     </defs>
-    <line x1="53" y1="53" x2="71" y2="71" stroke="url(#fm-grip)" strokeWidth="11" strokeLinecap="round" />
-    <line x1="49" y1="49" x2="55" y2="55" stroke="#a8a8a8" strokeWidth="7" />
-    <circle cx="33" cy="33" r="23" fill="url(#fm-glass)" />
+    <line x1="51" y1="59" x2="69" y2="75" stroke="url(#fm-grip)" strokeWidth="10" strokeLinecap="round" />
+    <line x1="47" y1="55" x2="53" y2="61" stroke="#a8a8a8" strokeWidth="7" />
+    <circle cx="31" cy="39" r="23" fill="url(#fm-glass)" />
     <g clipPath="url(#fm-lens)">
-      <g transform="rotate(-24 33 35)">
-        <path d="M23 28l-6-4M22 37h-7M24 46l-6 5M43 28l6-4M44 37h7M42 46l6 5" stroke="#111" strokeWidth="2" strokeLinecap="round" />
-        <path d="M29 20c-1-3-3-5-5-5M37 20c1-3 3-5 5-5" stroke="#111" strokeWidth="1.6" strokeLinecap="round" />
-        <circle cx="33" cy="24" r="6.5" fill="#111" />
-        <circle cx="30.5" cy="22.5" r="1.4" fill="#fff" /><circle cx="35.5" cy="22.5" r="1.4" fill="#fff" />
-        <ellipse cx="33" cy="37" rx="12.5" ry="13.5" fill="url(#fm-shell)" />
-        <path d="M33 24v26" stroke="#111" strokeWidth="1.4" />
-        <circle cx="27" cy="32" r="2.4" fill="#111" /><circle cx="39" cy="32" r="2.4" fill="#111" />
-        <circle cx="26.5" cy="41" r="2.1" fill="#111" /><circle cx="39.5" cy="41" r="2.1" fill="#111" />
-      </g>
+      <path d="M11 66c0-13 9-20 20-20s20 7 20 20z" fill="url(#fm-body)" />
+      <circle cx="31" cy="33" r="9.500" fill="url(#fm-head)" />
+      <path d="M21.500 32c0-7 4-11 9.500-11s9.500 4 9.500 11c-3-3.500-6-5-9-5s-7 1.500-10 5z" fill="#161616" />
     </g>
-    <path d="M17 27c2-6 7-10 13-11" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" opacity=".9" />
-    <circle cx="33" cy="33" r="24.5" stroke="url(#fm-rim)" strokeWidth="5" />
+    <path d="M15 33c2-6 7-10 13-11" stroke="#fff" strokeWidth="3" strokeLinecap="round" opacity=".85" />
+    <circle cx="31" cy="39" r="24.500" stroke="url(#fm-rim)" strokeWidth="4.500" />
+    <path d="M47 4h22a8 8 0 0 1 8 8v8a8 8 0 0 1-8 8h-10l-7 7v-7h-5a8 8 0 0 1-8-8v-8a8 8 0 0 1 8-8z" fill="#fbf8ec" stroke="#d8d2bb" strokeLinejoin="round" />
+    <circle cx="48" cy="16" r="2.300" fill="#111" /><circle cx="58" cy="16" r="2.300" fill="#111" /><circle cx="68" cy="16" r="2.300" fill="#111" />
   </svg>
 );
 
-/* A rough sketch on paper, then the real thing you can tap. */
+/* Prototyping: a sketch wired up to a real screen, ready for someone to click. */
 export const TangibleMark = () => (
   <svg className="mark" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
     <defs>
       <linearGradient id="tm-body" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#4d4d4d" /><stop offset="1" stopColor="#060606" /></linearGradient>
       <linearGradient id="tm-pic" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#8fc2ff" /><stop offset="1" stopColor="#2f6df0" /></linearGradient>
-      <linearGradient id="tm-btn" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#5b95ff" /><stop offset="1" stopColor="#1b56e0" /></linearGradient>
     </defs>
-    <g transform="rotate(-11 26 40)">
-      <rect x="6" y="14" width="38" height="52" rx="3" fill="#fbf8ec" stroke="#d8d2bb" />
-      <path d="M12.5 21.5c7-.8 18-.6 25-.2.5 5.500.3 11-.1 16.200-7 .5-18 .4-24.800 0-.4-5.200-.4-11 0-16z" stroke="#444" strokeWidth="1.3" strokeLinejoin="round" />
-      <path d="M13 22l24 15.500M37 22L13.500 37.500" stroke="#444" strokeWidth=".9" />
-      <path d="M12.500 44c6-.6 16-.5 21 0M12.500 49.500c5-.5 11-.4 15 0" stroke="#444" strokeWidth="1.3" strokeLinecap="round" />
-      <path d="M13 56.500c7-.5 12-.5 15.500 0 .3 1.600.2 3-.1 4.300-4 .4-10 .4-15.200 0-.4-1.300-.5-2.800-.2-4.300z" stroke="#444" strokeWidth="1.300" strokeLinejoin="round" />
+    <g transform="rotate(-7 19 40)">
+      <rect x="3" y="15" width="32" height="48" rx="3" fill="#fbf8ec" stroke="#d8d2bb" />
+      <path d="M8.500 21.500c6-.5 15-.4 21 0 .3 4 .2 8.500-.1 12-6 .4-15 .3-20.800 0-.4-3.500-.4-8.500-.1-12z" stroke="#444" strokeWidth="1.200" strokeLinejoin="round" />
+      <path d="M9 22l20 11M29 22L9 33" stroke="#444" strokeWidth=".8" />
+      <path d="M9 39c5-.4 13-.3 18 0M9 44c4-.3 9-.3 13 0" stroke="#444" strokeWidth="1.200" strokeLinecap="round" />
+      <rect x="9" y="50" width="20" height="7" rx="2" stroke="#2f6df0" strokeWidth="1.500" />
     </g>
-    <g transform="rotate(7 56 44)">
-      <rect x="40" y="16" width="31" height="58" rx="7.500" fill="url(#tm-body)" />
-      <rect x="42.500" y="18.500" width="26" height="53" rx="5.500" fill="#fff" />
-      <rect x="44.500" y="24" width="22" height="18" rx="3" fill="url(#tm-pic)" />
-      <path d="M46 46h17M46 50h12" stroke="#c9c9c9" strokeWidth="2" strokeLinecap="round" />
-      <rect x="44.500" y="56" width="22" height="10" rx="5" fill="url(#tm-btn)" />
-      <path d="M47 58.300h16" stroke="#fff" strokeOpacity=".55" strokeLinecap="round" />
-      <rect x="52" y="20" width="7" height="2" rx="1" fill="#111" />
+    <g transform="rotate(5 60 40)">
+      <rect x="44" y="8" width="31" height="62" rx="7.500" fill="url(#tm-body)" />
+      <rect x="46.500" y="11" width="26" height="56" rx="5" fill="#fff" />
+      <rect x="55" y="13" width="9" height="2.400" rx="1.200" fill="#111" />
+      <rect x="49.500" y="18" width="20" height="17" rx="2.500" fill="url(#tm-pic)" />
+      <rect x="49.500" y="39" width="20" height="2.500" rx="1.200" fill="#cfcfcf" />
+      <rect x="49.500" y="44.500" width="14" height="2.500" rx="1.200" fill="#cfcfcf" />
+      <rect x="49.500" y="53" width="20" height="8" rx="2.500" fill="#2f6df0" />
+    </g>
+    <path d="M32 53c10 1 8-20 18-24" stroke="#fff" strokeWidth="5" strokeLinecap="round" />
+    <path d="M32 53c10 1 8-20 18-24" stroke="#2f6df0" strokeWidth="2.200" strokeLinecap="round" />
+    <circle cx="31" cy="53" r="3" fill="#fff" stroke="#2f6df0" strokeWidth="2" />
+    <path d="M45 26l7 1.500-4 4.500z" fill="#2f6df0" stroke="#2f6df0" strokeWidth="1" strokeLinejoin="round" />
+    <path d="M58 52l15 6-6.200 2-2.300 6.200z" fill="#111" stroke="#fff" strokeWidth="1.800" strokeLinejoin="round" />
+  </svg>
+);
+
+/* UI design: the screen itself, with its type, its colours and the pen that drew it. */
+export const PolishMark = () => (
+  <svg className="mark" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="pm-bar" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#3a3a3a" /><stop offset="1" stopColor="#0a0a0a" /></linearGradient>
+      <linearGradient id="pm-nib" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#ffd84d" /><stop offset="1" stopColor="#f09a12" /></linearGradient>
+    </defs>
+    <rect x="4" y="9" width="62" height="56" rx="8" fill="#fff" stroke="#dcdcdc" />
+    <path d="M4 17a8 8 0 0 1 8-8h46a8 8 0 0 1 8 8v3H4z" fill="url(#pm-bar)" />
+    <circle cx="11.500" cy="14.500" r="1.800" fill="#fff" opacity=".9" /><circle cx="17.500" cy="14.500" r="1.800" fill="#fff" opacity=".55" /><circle cx="23.500" cy="14.500" r="1.800" fill="#fff" opacity=".3" />
+    <path fill="#111" transform="translate(-3 -1.500)" d="M17.5 37.6V36.4H26.2V37.6ZM29.8 42.8 31.8 43.5V44H24.7V43.5L26.9 42.8L21 28.8L21.7 28.8L16.2 42.8L18.3 43.5V44H12.8V43.5L14.8 42.8L21.5 26.2H22.7ZM39.4 36.8 39.5 37.7Q38.1 38.1 37.2 38.4Q36.3 38.8 35.8 39.1Q35.3 39.5 35.1 39.9Q35 40.3 35 40.8Q35 41.7 35.4 42.2Q35.9 42.6 36.7 42.6Q37.2 42.6 37.7 42.3Q38.1 42 38.4 41.6Q38.7 41.1 38.7 40.5V35.6Q38.7 34.7 38.2 34.2Q37.7 33.6 36.6 33.6Q36.2 33.6 35.7 33.7Q35.2 33.8 34.8 34.1L35.4 33.4Q35.4 33.9 35.3 34.3Q35.2 34.7 35.1 35Q35 35.3 34.9 35.5Q34.6 35.7 34.3 35.8Q34 35.9 33.6 35.9Q33.2 35.9 32.9 35.7Q32.6 35.5 32.6 35.2Q32.6 34.7 33.1 34.3Q33.5 33.8 34.2 33.4Q35 32.9 35.9 32.7Q36.8 32.4 37.7 32.4Q39 32.4 39.7 32.8Q40.5 33.2 40.8 33.9Q41.2 34.6 41.2 35.7V41.7Q41.2 42.1 41.3 42.3Q41.4 42.6 41.6 42.7Q41.8 42.8 42.1 42.8Q42.4 42.8 42.8 42.7Q43.1 42.6 43.4 42.4V43Q42.8 43.7 42.1 44Q41.5 44.3 40.9 44.3Q40.2 44.3 39.7 44Q39.2 43.7 39 43.1Q38.7 42.5 38.7 41.8L38.8 41.7Q38.6 42.5 38.1 43.1Q37.7 43.6 37 44Q36.4 44.3 35.6 44.3Q34.2 44.3 33.4 43.5Q32.5 42.8 32.5 41.4Q32.5 40.6 32.8 40Q33.1 39.4 33.8 38.9Q34.6 38.4 35.9 37.8Q37.3 37.3 39.4 36.8Z" />
+    <circle cx="15" cy="54" r="4.500" fill="#2f6df0" /><circle cx="26" cy="54" r="4.500" fill="#f4b23a" /><circle cx="37" cy="54" r="4.500" fill="#e5392f" /><circle cx="48" cy="54" r="4.500" fill="#111" />
+    <g transform="rotate(38 62 44)">
+      <path d="M56 22h12v7l4 15-10 16-10-16 4-15z" fill="url(#pm-nib)" stroke="#111" strokeWidth="1.600" strokeLinejoin="round" />
+      <rect x="54.500" y="16" width="15" height="7" rx="2" fill="#111" />
+      <path d="M62 43v17" stroke="#111" strokeWidth="1.400" />
+      <circle cx="62" cy="42" r="2.400" fill="#111" />
     </g>
   </svg>
 );
 
-/* The last pass: a cut gem with the shine on it. */
-export const PolishMark = () => (
+/* Design systems: the same few components, ready to be used again and again. */
+export const SystemMark = () => (
   <svg className="mark" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
     <defs>
-      <linearGradient id="pm-star" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#ffd84d" /><stop offset="1" stopColor="#f09a12" /></linearGradient>
+      <linearGradient id="sm-tile" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#fff" /><stop offset="1" stopColor="#efefef" /></linearGradient>
+      <linearGradient id="sm-blue" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#5b95ff" /><stop offset="1" stopColor="#1b56e0" /></linearGradient>
+      <linearGradient id="sm-black" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#4a4a4a" /><stop offset="1" stopColor="#060606" /></linearGradient>
     </defs>
-    <path d="M18 24L8 37h15z" fill="#4b8ff5" /><path d="M18 24l5 13 13-13z" fill="#a9d2ff" />
-    <path d="M36 24L23 37h26z" fill="#d8ecff" /><path d="M36 24l13 13 5-13z" fill="#8ec2ff" />
-    <path d="M54 24l-5 13h15z" fill="#3f7fe8" />
-    <path d="M8 37h15l13 36z" fill="#2a66dc" /><path d="M23 37h26L36 73z" fill="#6aa9ff" /><path d="M49 37h15L36 73z" fill="#1646b4" />
-    <path d="M26 37h9L31 55z" fill="#fff" opacity=".45" />
-    <path d="M18 24h36l10 13-28 36L8 37z" stroke="#123a96" strokeOpacity=".35" strokeLinejoin="round" />
-    <path d="M65 5c1 6 3 8 9 9-6 1-8 3-9 9-1-6-3-8-9-9 6-1 8-3 9-9z" fill="url(#pm-star)" />
-    <path d="M12 8c.600 4 2 5.400 6 6-4 .600-5.400 2-6 6-.600-4-2-5.400-6-6 4-.600 5.400-2 6-6z" fill="url(#pm-star)" />
-    <path d="M66 49c.500 3 1.500 4 4.500 4.500-3 .500-4 1.500-4.500 4.500-.500-3-1.500-4-4.500-4.500 3-.500 4-1.500 4.500-4.500z" fill="url(#pm-star)" />
+    <rect x="4" y="4" width="34" height="34" rx="8" fill="url(#sm-tile)" stroke="#d6d6d6" />
+    <rect x="42" y="4" width="34" height="34" rx="8" fill="url(#sm-tile)" stroke="#d6d6d6" />
+    <rect x="4" y="42" width="34" height="34" rx="8" fill="url(#sm-tile)" stroke="#d6d6d6" />
+    <rect x="42" y="42" width="34" height="34" rx="8" fill="url(#sm-tile)" stroke="#d6d6d6" />
+    <path d="M21 10.500l4.200 4.200-4.200 4.200-4.200-4.200zM13.800 17.700l4.200 4.200-4.200 4.200-4.200-4.200zM28.200 17.700l4.200 4.200-4.200 4.200-4.200-4.200zM21 24.900l4.200 4.200-4.200 4.200-4.200-4.200z" fill="url(#sm-blue)" />
+    <rect x="47" y="14" width="24" height="14" rx="7" fill="url(#sm-blue)" />
+    <circle cx="64" cy="21" r="5.500" fill="#fff" />
+    <rect x="9" y="52" width="24" height="14" rx="5" fill="url(#sm-black)" />
+    <rect x="14" y="58" width="14" height="2.400" rx="1.200" fill="#fff" />
+    <rect x="49" y="49" width="20" height="20" rx="5" fill="url(#sm-blue)" />
+    <path d="M53.500 59l4 4 7-8" stroke="#fff" strokeWidth="2.800" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );

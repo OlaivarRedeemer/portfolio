@@ -313,9 +313,10 @@ export const history = [
 ];
 
 export const principles = [
-  ["Find the real problem", "Research that gets beneath the feature request, so the work starts with what matters."],
-  ["Make it tangible", "Prototypes that invite useful conversations early, before anything is expensive to change."],
-  ["Polish with purpose", "Details that make the whole experience feel inevitable, not decorated."],
+  ["UX research", "I dig into the users, the flows and the business behind the request, so the work starts with the real problem and not just the next feature on the list."],
+  ["Prototyping", "Clickable flows give everyone something real to react to early on, so the useful conversations happen before anything is expensive to change."],
+  ["UI design", "Web apps, mobile apps and landing pages, with the details that make the experience feel inevitable, not decorated."],
+  ["Design systems", "Reusable components and clear rules, so your team can keep shipping new screens that still feel like one product."],
 ];
 
 export const contact = {

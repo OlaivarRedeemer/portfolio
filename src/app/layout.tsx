@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://redeemer-olaivar.vercel.app"),
   title: { default: "Redeemer Olaivar, product designer", template: "%s · Redeemer Olaivar" },
   description: "Redeemer Olaivar is a product designer who makes digital products feel obvious in hindsight. 4+ years with clients in the Philippines, Singapore and Canada.",
-  icons: { icon: "/logo.svg" },
+  icons: { icon: [{ url: "/logo.svg", type: "image/svg+xml" }, { url: "/icon-32.png", sizes: "32x32", type: "image/png" }], apple: "/apple-icon.png" },
 };
 
 // Hidden reveal states only apply under `.m`, so no-JS and reduced-motion visitors see everything.

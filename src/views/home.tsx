@@ -1,5 +1,5 @@
 import ContactSection from "@/components/contact-section";
-import { FindMark, Play, PolishMark, TangibleMark } from "@/components/icons";
+import { FindMark, Play, PolishMark, SystemMark, TangibleMark } from "@/components/icons";
 import Pic from "@/components/pic";
 import ProjectCard from "@/components/project-card";
 import Words from "@/components/words";
@@ -11,9 +11,9 @@ const clients = [
   ["logo-blazesoft", "Blazesoft"],
 ];
 
-const marks = [FindMark, TangibleMark, PolishMark];
+const marks = [FindMark, TangibleMark, PolishMark, SystemMark];
 
-const card = (slug: string) => <ProjectCard project={bySlug(slug)!} />;
+const card = (slug: string) => <ProjectCard project={bySlug(slug)!} shine />;
 
 export default function Home() {
   return (
@@ -38,8 +38,8 @@ export default function Home() {
         ))}
       </ul>
 
-      <h2 className="approach-title sec display r-words"><Words>Clarity over cleverness.</Words><br /><Words start={22}>People over pixels.</Words></h2>
-      <section className="approach rule" aria-label="How I work">
+      <h2 className="approach-title sec display r-words"><Words>From a messy idea to a product</Words>{" "}<br /><Words start={30}>that feels obvious</Words></h2>
+      <section className="approach rule" aria-label="What I do">
         {principles.map(([t, d], i) => {
           const Mark = marks[i];
           return (
