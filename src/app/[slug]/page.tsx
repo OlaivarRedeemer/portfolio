@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { bySlug, projects } from "@/contents/projects";
+import { bySlug, liveProjects } from "@/contents/projects";
 import CaseStudy from "@/views/case-study";
 
 type Props = { params: { slug: string } };
 
 export const dynamicParams = false;
-export const generateStaticParams = () => projects.map((p) => ({ slug: p.slug }));
+export const generateStaticParams = () => liveProjects.map((p) => ({ slug: p.slug }));
 
 export const generateMetadata = ({ params }: Props): Metadata => {
   const p = bySlug(params.slug);

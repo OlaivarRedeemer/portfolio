@@ -4,7 +4,7 @@ import Pic from "@/components/pic";
 import Sky from "@/components/sky";
 import ProjectCard from "@/components/project-card";
 import Words from "@/components/words";
-import { bySlug, principles, contact } from "@/contents/projects";
+import { bySlug, principles, contact, showPersonal } from "@/contents/projects";
 
 const clients = [
   ["logo-brooky", "Brooky Technologies"],
@@ -55,8 +55,12 @@ export default function Home() {
           );
         })}
       </section>
-      <h2 id="personal" className="personal-title sec display r-words"><Words>Personal projects</Words></h2>
-      <section className="cells rule" aria-labelledby="personal">{card("kuhit")}{card("homure")}</section>
+      {showPersonal && (
+        <>
+          <h2 id="personal" className="personal-title sec display r-words"><Words>Personal projects</Words></h2>
+          <section className="cells rule" aria-labelledby="personal">{card("kuhit")}{card("homure")}</section>
+        </>
+      )}
       <ContactSection />
     </>
   );

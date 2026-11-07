@@ -301,7 +301,11 @@ export const projects: Project[] = [
 
 export const covers: Record<string, string> = { brooky: "cover-brooky", venue4use: "cover-v4u", blazesoft: "cover-blazesoft", kuhit: "cover-kuhit", homure: "cover-homure" };
 
-export const bySlug = (slug: string) => projects.find((p) => p.slug === slug);
+/** Personal projects are hidden for now. Set to true to bring Kuhit and Homure back. */
+export const showPersonal = false;
+export const liveProjects = projects.filter((p) => showPersonal || !p.personal);
+
+export const bySlug = (slug: string) => liveProjects.find((p) => p.slug === slug);
 
 export const history = [
   ["exp-blazesoft", "UI/UX Designer", "at Blazesoft, Canada", "Feb 2025 - Present"],
